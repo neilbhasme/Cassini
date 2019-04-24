@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		790B2FF222705446006DBB58 /* DemoURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790B2FF122705446006DBB58 /* DemoURLs.swift */; };
+		790B2FF42270548B006DBB58 /* oval.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 790B2FF32270548B006DBB58 /* oval.jpg */; };
 		7914E06A226F446A00554E49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7914E069226F446A00554E49 /* AppDelegate.swift */; };
 		7914E06F226F446A00554E49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7914E06D226F446A00554E49 /* Main.storyboard */; };
 		7914E071226F446B00554E49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7914E070226F446B00554E49 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		790B2FF122705446006DBB58 /* DemoURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoURLs.swift; path = ../../cs193p_iOS11/Cassini/Cassini/DemoURLs.swift; sourceTree = "<group>"; };
+		790B2FF32270548B006DBB58 /* oval.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = oval.jpg; path = ../../cs193p_iOS11/Cassini/Cassini/oval.jpg; sourceTree = "<group>"; };
 		7914E066226F446A00554E49 /* Cassini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cassini.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7914E069226F446A00554E49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7914E06E226F446A00554E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 				7914E07B226F44D900554E49 /* Supporting Files */,
 				7914E06D226F446A00554E49 /* Main.storyboard */,
 				7914E075226F446B00554E49 /* Info.plist */,
+				790B2FF122705446006DBB58 /* DemoURLs.swift */,
+				790B2FF32270548B006DBB58 /* oval.jpg */,
 				7914E07C226F45EF00554E49 /* ImageViewController.swift */,
 			);
 			path = Cassini;
@@ -131,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7914E074226F446B00554E49 /* LaunchScreen.storyboard in Resources */,
+				790B2FF42270548B006DBB58 /* oval.jpg in Resources */,
 				7914E071226F446B00554E49 /* Assets.xcassets in Resources */,
 				7914E06F226F446A00554E49 /* Main.storyboard in Resources */,
 			);
@@ -145,6 +152,7 @@
 			files = (
 				7914E07D226F45EF00554E49 /* ImageViewController.swift in Sources */,
 				7914E06A226F446A00554E49 /* AppDelegate.swift in Sources */,
+				790B2FF222705446006DBB58 /* DemoURLs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
