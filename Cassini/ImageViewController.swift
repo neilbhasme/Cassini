@@ -12,15 +12,18 @@ class ImageViewController: UIViewController {
 
     var imageURL: URL? {
         didSet {
-            imageView.image = nil
+            imageView?.image = nil
+            spinner?.stopAnimating()
             if view.window != nil {
             fetchImage()
             }
         }
     }
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    //Pinch to zoom can be found in lecture 9 last 10-15 mins
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if imageView.image == nil {
+        if imageView?.image == nil {
             fetchImage()
         }
     }
@@ -29,17 +32,22 @@ class ImageViewController: UIViewController {
     
     private func fetchImage() {
         if let url = imageURL {
-            let urlContents = try? Data(contentsOf: url)
-            if let imageData = urlContents {
-                imageView.image = UIImage(data: imageData)
+            spinner?.startAnimating()
+            DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+                let urlContents = try? Data(contentsOf: url)
+                DispatchQueue.main.async {
+                    if let imageData = urlContents, url == self?.imageURL {
+                        self?.imageView?.image = UIImage(data: imageData)
+                    }
+                }
             }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if imageURL == nil {
-            imageURL = DemoURLs.stanford
-        }
+//        if imageURL == nil {
+//            imageURL = DemoURLs.stanford
+//        }
     }
 }
